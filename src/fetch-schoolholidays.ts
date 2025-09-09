@@ -22,10 +22,16 @@ interface Vacation {
   regions: Region[];
 }
 
+interface VacationInfo {
+  type: string;
+  compulsorydates: string;
+  regions: Region[];
+}
+
 interface YearContent {
   title: string;
   schoolyear: string;
-  vacations: Vacation[];
+  vacations: VacationInfo[];
 }
 
 interface YearData {
@@ -82,6 +88,20 @@ async function fetchWithRetry(url: string, retries = 3): Promise<YearData[]> {
             console.log('Invalid content structure:', JSON.stringify(content, null, 2));
             throw new Error(`Invalid content structure: missing required fields`);
           }
+
+          for (const vacation of content.vacations) {
+            if (!vacation.type || !vacation.regions || !Array.isArray(vacation.regions)) {
+              console.log('Invalid vacation structure:', JSON.stringify(vacation, null, 2));
+              throw new Error(`Invalid vacation structure: missing required fields`);
+            }
+
+            for (const region of vacation.regions) {
+              if (!region.region || !region.startdate || !region.enddate) {
+                console.log('Invalid region structure:', JSON.stringify(region, null, 2));
+                throw new Error(`Invalid region structure: missing required fields`);
+              }
+            }
+          }
         }
       }
       
@@ -105,23 +125,25 @@ export async function fetchSchoolHolidays(
   try {
     console.log('Fetching from URL:', url);
     const yearData = await fetchWithRetry(url);
-    console.log(`Processing ${yearData.length} years of data...`);
+    console.log(`Processing ${yearData.length} year entries...`);
     
     const holidays: SchoolHoliday[] = [];
 
     for (const year of yearData) {
       for (const content of year.content) {
         const cleanSchoolYear = content.schoolyear.replace(/\s+/g, '');
+        
         for (const vacation of content.vacations) {
           const cleanType = vacation.type.replace(/\s+/g, '').toLowerCase();
+          
           for (const region of vacation.regions) {
             holidays.push({
-              id: `${year.id}-${cleanSchoolYear}-${cleanType}-${region.region}`,
+              id: `${cleanSchoolYear}-${cleanType}-${region.region}`,
               schoolyear: cleanSchoolYear,
               type: cleanType,
               region: region.region,
-              startdate: region.startdate,
-              enddate: region.enddate,
+              startdate: region.startdate.split('T')[0], // Remove time part
+              enddate: region.enddate.split('T')[0], // Remove time part
               notice: year.notice?.trim()
             });
           }
