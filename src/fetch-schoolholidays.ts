@@ -59,20 +59,28 @@ async function fetchWithRetry(url: string, retries = 3): Promise<YearData[]> {
       }
       
       const data = await res.json();
-      
+
       if (!Array.isArray(data)) {
+        console.log('Received data:', JSON.stringify(data, null, 2));
         throw new Error(`Invalid response format: expected array, got ${typeof data}`);
       }
 
-      // Validate data structure
+      // Log the first item for debugging
+      if (data.length > 0) {
+        console.log('First year data:', JSON.stringify(data[0].content?.[0]?.vacations?.[0], null, 2));
+      }
+
+      // Validate data structure with detailed logging
       for (const year of data) {
         if (!year.id || !year.content || !Array.isArray(year.content)) {
-          throw new Error(`Invalid year data structure: ${JSON.stringify(year)}`);
+          console.log('Invalid year structure:', JSON.stringify(year, null, 2));
+          throw new Error(`Invalid year data structure: missing required fields`);
         }
 
         for (const content of year.content) {
           if (!content.schoolyear || !content.vacations || !Array.isArray(content.vacations)) {
-            throw new Error(`Invalid content structure: ${JSON.stringify(content)}`);
+            console.log('Invalid content structure:', JSON.stringify(content, null, 2));
+            throw new Error(`Invalid content structure: missing required fields`);
           }
         }
       }
@@ -95,14 +103,17 @@ export async function fetchSchoolHolidays(
     : `${BASE}?output=json`;
 
   try {
+    console.log('Fetching from URL:', url);
     const yearData = await fetchWithRetry(url);
+    console.log(`Processing ${yearData.length} years of data...`);
+    
     const holidays: SchoolHoliday[] = [];
 
     for (const year of yearData) {
       for (const content of year.content) {
-        const cleanSchoolYear = content.schoolyear.trim();
+        const cleanSchoolYear = content.schoolyear.replace(/\s+/g, '');
         for (const vacation of content.vacations) {
-          const cleanType = vacation.type.trim();
+          const cleanType = vacation.type.replace(/\s+/g, '').toLowerCase();
           for (const region of vacation.regions) {
             holidays.push({
               id: `${year.id}-${cleanSchoolYear}-${cleanType}-${region.region}`,
@@ -111,13 +122,14 @@ export async function fetchSchoolHolidays(
               region: region.region,
               startdate: region.startdate,
               enddate: region.enddate,
-              notice: year.notice
+              notice: year.notice?.trim()
             });
           }
         }
       }
     }
 
+    console.log(`Generated ${holidays.length} individual holiday records`);
     return holidays;
   } catch (error) {
     console.error('Failed to fetch school holidays:', error);
