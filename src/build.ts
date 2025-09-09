@@ -34,68 +34,93 @@ async function main() {
     const school = await fetchSchoolHolidays();
     
     if (!school || !Array.isArray(school) || school.length === 0) {
+      console.error('School holidays response:', school);
       throw new Error('No school holidays data received');
     }
     
     console.log(`Processing ${school.length} school holidays...`);
 
-    const evAll = mapSchoolToEvents(school);
-    const evNorth = mapSchoolToEvents(school, "noord");
-    const evCentral = mapSchoolToEvents(school, "midden");
-    const evSouth = mapSchoolToEvents(school, "zuid");
+    // Map school holidays to events with error handling
+    let evAll, evNorth, evCentral, evSouth;
+    try {
+      evAll = mapSchoolToEvents(school);
+      evNorth = mapSchoolToEvents(school, "noord");
+      evCentral = mapSchoolToEvents(school, "midden");
+      evSouth = mapSchoolToEvents(school, "zuid");
+    } catch (error) {
+      console.error('Failed to map school holidays to events:', error);
+      console.error('School holidays data:', JSON.stringify(school.slice(0, 2), null, 2));
+      throw new Error(`Failed to process school holidays: ${error instanceof Error ? error.message : error}`);
+    }
 
     console.log('Generating school holiday ICS files...');
-    writeFileSync(
-      join(OUT, "nl-school-all.ics"),
-      eventsToIcs("NL — Schoolvakanties (Tümü)", evAll)
-    );
-    writeFileSync(
-      join(OUT, "nl-school-north.ics"),
-      eventsToIcs("NL — Schoolvakanties (Noord)", evNorth)
-    );
-    writeFileSync(
-      join(OUT, "nl-school-central.ics"),
-      eventsToIcs("NL — Schoolvakanties (Midden)", evCentral)
-    );
-    writeFileSync(
-      join(OUT, "nl-school-south.ics"),
-      eventsToIcs("NL — Schoolvakanties (Zuid)", evSouth)
-    );
+    try {
+      writeFileSync(
+        join(OUT, "nl-school-all.ics"),
+        eventsToIcs("NL — Schoolvakanties (Tümü)", evAll)
+      );
+      writeFileSync(
+        join(OUT, "nl-school-north.ics"),
+        eventsToIcs("NL — Schoolvakanties (Noord)", evNorth)
+      );
+      writeFileSync(
+        join(OUT, "nl-school-central.ics"),
+        eventsToIcs("NL — Schoolvakanties (Midden)", evCentral)
+      );
+      writeFileSync(
+        join(OUT, "nl-school-south.ics"),
+        eventsToIcs("NL — Schoolvakanties (Zuid)", evSouth)
+      );
+    } catch (error) {
+      console.error('Failed to generate school holiday ICS files:', error);
+      throw new Error(`ICS generation failed for school holidays: ${error instanceof Error ? error.message : error}`);
+    }
 
     console.log('Generating public holidays...');
-    const nowY = new Date().getUTCFullYear();
-    const pub = [nowY - 1, nowY, nowY + 1].flatMap((y) =>
-      generateNlPublicHolidays(y)
-    );
-    const pubEvents: IcsEvent[] = pub.map((p) => ({
-      uid: p.uid,
-      title: p.title,
-      start: p.start,
-      end: p.end,
-      allDay: true,
-    }));
-    writeFileSync(
-      join(OUT, "nl-public-holidays.ics"),
-      eventsToIcs("NL — Officiële Feestdagen", pubEvents)
-    );
+    let pubEvents;
+    try {
+      const nowY = new Date().getUTCFullYear();
+      const pub = [nowY - 1, nowY, nowY + 1].flatMap((y) =>
+        generateNlPublicHolidays(y)
+      );
+      pubEvents = pub.map((p) => ({
+        uid: p.uid,
+        title: p.title,
+        start: p.start,
+        end: p.end,
+        allDay: true,
+      }));
+      writeFileSync(
+        join(OUT, "nl-public-holidays.ics"),
+        eventsToIcs("NL — Officiële Feestdagen", pubEvents)
+      );
+    } catch (error) {
+      console.error('Failed to generate public holidays:', error);
+      throw new Error(`Public holidays generation failed: ${error instanceof Error ? error.message : error}`);
+    }
 
     console.log('Generating combined calendar...');
-    const allInOne = [...pubEvents, ...evAll].sort(
-      (a, b) => a.start.getTime() - b.start.getTime()
-    );
-    writeFileSync(
-      join(OUT, "nl-all-in-one.ics"),
-      eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
-    );
+    try {
+      const allInOne = [...pubEvents, ...evAll].sort(
+        (a, b) => a.start.getTime() - b.start.getTime()
+      );
+      writeFileSync(
+        join(OUT, "nl-all-in-one.ics"),
+        eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
+      );
+    } catch (error) {
+      console.error('Failed to generate combined calendar:', error);
+      throw new Error(`Combined calendar generation failed: ${error instanceof Error ? error.message : error}`);
+    }
 
     console.log('Successfully generated all calendar files');
   } catch (error) {
-    console.error('Build failed:', error);
+    console.error('Build failed:', error instanceof Error ? error.stack : error);
     throw error;
   }
 }
 
 main().catch((error) => {
-  console.error('Fatal error:', error);
+  console.error('Fatal error:', error instanceof Error ? error.stack : error);
   process.exit(1);
 });
