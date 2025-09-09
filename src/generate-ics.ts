@@ -15,20 +15,35 @@ function toDateArrayUTC(d: Date): DateArray {
 }
 
 export function eventsToIcs(name: string, events: IcsEvent[]): string {
-  const { error, value } = createEvents(
-    events.map((e) => ({
+  if (!Array.isArray(events)) {
+    throw new Error('Expected events to be an array');
+  }
+  
+  const eventData = events.map((e) => {
+    if (!(e.start instanceof Date) || !(e.end instanceof Date)) {
+      throw new Error('Invalid date format in event: ' + JSON.stringify(e));
+    }
+    return {
       title: e.title,
       start: toDateArrayUTC(e.start),
       end: toDateArrayUTC(e.end),
       description: e.description,
       location: e.location,
       calName: name,
-      productId: "-//nl-holidays-ical//github.com/ORG/REPO//EN",
+      productId: "-//nl-holidays-ical//burakkp/nl-holidays-ical//EN",
       uid: e.uid,
-    }))
-  );
-  if (error) throw error;
-  if (!value) throw new Error("Failed to create events");
+    };
+  });
+
+  const { error, value } = createEvents(eventData);
+  
+  if (error) {
+    console.error('Failed to create events:', error);
+    throw error;
+  }
+  if (!value) {
+    throw new Error("Failed to create events: no value returned");
+  }
 
   // ek başlıklar
   return [

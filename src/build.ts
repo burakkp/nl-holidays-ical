@@ -26,61 +26,76 @@ function mapSchoolToEvents(rows: any[], region?: string): IcsEvent[] {
 }
 
 async function main() {
-  ensureOut();
+  try {
+    console.log('Creating output directory...');
+    ensureOut();
 
-  // School holidays (last 3 ve next 3 schoolyears gibi geniş bir aralık alınabilir)
-  const school = await fetchSchoolHolidays();
+    console.log('Fetching school holidays...');
+    const school = await fetchSchoolHolidays();
+    
+    if (!school || !Array.isArray(school) || school.length === 0) {
+      throw new Error('No school holidays data received');
+    }
+    
+    console.log(`Processing ${school.length} school holidays...`);
 
-  const evAll = mapSchoolToEvents(school);
-  const evNorth = mapSchoolToEvents(school, "noord");
-  const evCentral = mapSchoolToEvents(school, "midden");
-  const evSouth = mapSchoolToEvents(school, "zuid");
+    const evAll = mapSchoolToEvents(school);
+    const evNorth = mapSchoolToEvents(school, "noord");
+    const evCentral = mapSchoolToEvents(school, "midden");
+    const evSouth = mapSchoolToEvents(school, "zuid");
 
-  writeFileSync(
-    join(OUT, "nl-school-all.ics"),
-    eventsToIcs("NL — Schoolvakanties (Tümü)", evAll)
-  );
-  writeFileSync(
-    join(OUT, "nl-school-north.ics"),
-    eventsToIcs("NL — Schoolvakanties (Noord)", evNorth)
-  );
-  writeFileSync(
-    join(OUT, "nl-school-central.ics"),
-    eventsToIcs("NL — Schoolvakanties (Midden)", evCentral)
-  );
-  writeFileSync(
-    join(OUT, "nl-school-south.ics"),
-    eventsToIcs("NL — Schoolvakanties (Zuid)", evSouth)
-  );
+    console.log('Generating school holiday ICS files...');
+    writeFileSync(
+      join(OUT, "nl-school-all.ics"),
+      eventsToIcs("NL — Schoolvakanties (Tümü)", evAll)
+    );
+    writeFileSync(
+      join(OUT, "nl-school-north.ics"),
+      eventsToIcs("NL — Schoolvakanties (Noord)", evNorth)
+    );
+    writeFileSync(
+      join(OUT, "nl-school-central.ics"),
+      eventsToIcs("NL — Schoolvakanties (Midden)", evCentral)
+    );
+    writeFileSync(
+      join(OUT, "nl-school-south.ics"),
+      eventsToIcs("NL — Schoolvakanties (Zuid)", evSouth)
+    );
 
-  // Public holidays — üretim: mevcut yıl ±1 (abone olanlar için yeterli)
-  const nowY = new Date().getUTCFullYear();
-  const pub = [nowY - 1, nowY, nowY + 1].flatMap((y) =>
-    generateNlPublicHolidays(y)
-  );
-  const pubEvents: IcsEvent[] = pub.map((p) => ({
-    uid: p.uid,
-    title: p.title,
-    start: p.start,
-    end: p.end,
-    allDay: true,
-  }));
-  writeFileSync(
-    join(OUT, "nl-public-holidays.ics"),
-    eventsToIcs("NL — Officiële Feestdagen", pubEvents)
-  );
+    console.log('Generating public holidays...');
+    const nowY = new Date().getUTCFullYear();
+    const pub = [nowY - 1, nowY, nowY + 1].flatMap((y) =>
+      generateNlPublicHolidays(y)
+    );
+    const pubEvents: IcsEvent[] = pub.map((p) => ({
+      uid: p.uid,
+      title: p.title,
+      start: p.start,
+      end: p.end,
+      allDay: true,
+    }));
+    writeFileSync(
+      join(OUT, "nl-public-holidays.ics"),
+      eventsToIcs("NL — Officiële Feestdagen", pubEvents)
+    );
 
-  // Hepsi bir arada
-  const allInOne = [...pubEvents, ...evAll].sort(
-    (a, b) => a.start.getTime() - b.start.getTime()
-  );
-  writeFileSync(
-    join(OUT, "nl-all-in-one.ics"),
-    eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
-  );
+    console.log('Generating combined calendar...');
+    const allInOne = [...pubEvents, ...evAll].sort(
+      (a, b) => a.start.getTime() - b.start.getTime()
+    );
+    writeFileSync(
+      join(OUT, "nl-all-in-one.ics"),
+      eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
+    );
+
+    console.log('Successfully generated all calendar files');
+  } catch (error) {
+    console.error('Build failed:', error);
+    throw error;
+  }
 }
 
-main().catch((e) => {
-  console.error(e);
+main().catch((error) => {
+  console.error('Fatal error:', error);
   process.exit(1);
 });

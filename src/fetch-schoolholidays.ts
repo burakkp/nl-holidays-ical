@@ -44,10 +44,19 @@ async function fetchWithRetry(url: string, retries = 3): Promise<RawSchoolHolida
       }
       
       const data = await res.json();
-      console.log('Response data:', data);
       if (!Array.isArray(data)) {
         throw new Error(`Invalid response format: expected array, got ${typeof data}`);
       }
+      
+      // Validate data structure
+      if (!data.every(item => 
+        typeof item === 'object' && item !== null &&
+        'id' in item && 'schoolyear' in item && 'type' in item &&
+        'startdate' in item && 'enddate' in item
+      )) {
+        throw new Error('Invalid data structure in response');
+      }
+      
       return data as RawSchoolHoliday[];
     } catch (error) {
       console.error(`Attempt ${i + 1} failed:`, error);
