@@ -1,0 +1,27 @@
+{
+  "name": "nl-holidays-ical",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node --experimental-modules dist/build.js",
+    "dev": "tsx watch src/build.ts",
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "dayjs-business-days": "^1.0.1",
+    "ics": "^3.7.6",
+    "undici": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "tsx": "^3.12.10",
+    "typescript": "^5.2.2"
+  }
+}
