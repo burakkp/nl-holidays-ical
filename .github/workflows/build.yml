@@ -31,12 +31,13 @@ jobs:
         run: npx tsx src/build.ts
       - name: Prepare Pages content
         run: |
-          mkdir -p docs
-          cp -r dist/* docs/
+          mkdir -p _site
+          cp -r dist/* _site/
+          cp dist/nl-all-in-one.ics _site/index.ics
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: _site
 
   deploy:
     needs: build
@@ -49,7 +50,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

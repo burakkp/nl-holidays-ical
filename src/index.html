@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dutch School Holidays Calendar</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+        }
+        .calendar-list {
+            list-style: none;
+            padding: 0;
+        }
+        .calendar-list li {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .calendar-list a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .calendar-list a:hover {
+            text-decoration: underline;
+        }
+        .description {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dutch School Holidays Calendar</h1>
+    <p>Subscribe to these calendars to stay updated with Dutch school holidays. The calendars are automatically updated daily.</p>
+    
+    <ul class="calendar-list">
+        <li>
+            <a href="nl-all-in-one.ics">All Holidays (School + Public)</a>
+            <div class="description">Combined calendar with all school holidays and public holidays</div>
+        </li>
+        <li>
+            <a href="nl-school-all.ics">All School Holidays</a>
+            <div class="description">All school holidays for all regions</div>
+        </li>
+        <li>
+            <a href="nl-school-north.ics">North Region School Holidays</a>
+            <div class="description">School holidays for the Northern region (Noord)</div>
+        </li>
+        <li>
+            <a href="nl-school-central.ics">Central Region School Holidays</a>
+            <div class="description">School holidays for the Central region (Midden)</div>
+        </li>
+        <li>
+            <a href="nl-school-south.ics">South Region School Holidays</a>
+            <div class="description">School holidays for the Southern region (Zuid)</div>
+        </li>
+        <li>
+            <a href="nl-public-holidays.ics">Public Holidays</a>
+            <div class="description">Dutch public holidays only</div>
+        </li>
+    </ul>
+
+    <footer>
+        <p>Generated and maintained by <a href="https://github.com/burakkp/nl-holidays-ical">nl-holidays-ical</a></p>
+    </footer>
+</body>
+</html>

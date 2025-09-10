@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync, copyFileSync } from "node:fs";
 import { join } from "node:path";
 import { eventsToIcs, IcsEvent } from "./generate-ics.js";
 import { fetchSchoolHolidays } from "./fetch-schoolholidays.js";
@@ -107,6 +107,18 @@ async function main() {
       writeFileSync(
         join(OUT, "nl-all-in-one.ics"),
         eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
+      );
+
+      // Create index.ics that redirects to all-in-one calendar
+      writeFileSync(
+        join(OUT, "index.ics"),
+        eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
+      );
+
+      // Copy index.html to output directory
+      copyFileSync(
+        join(__dirname, "index.html"),
+        join(OUT, "index.html")
       );
     } catch (error) {
       console.error('Failed to generate combined calendar:', error);
