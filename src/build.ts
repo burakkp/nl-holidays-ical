@@ -34,7 +34,17 @@ async function main() {
     ensureOut();
 
     console.log('Fetching school holidays...');
-    const school = await fetchSchoolHolidays();
+    // Fetch both current and next school year
+    const currentYear = new Date().getFullYear();
+    const schoolCurrentYear = `${currentYear}-${currentYear + 1}`;
+    const schoolNextYear = `${currentYear + 1}-${currentYear + 2}`;
+    
+    const [currentSchool, nextSchool] = await Promise.all([
+      fetchSchoolHolidays(schoolCurrentYear),
+      fetchSchoolHolidays(schoolNextYear)
+    ]);
+    
+    const school = [...(currentSchool || []), ...(nextSchool || [])];
     
     if (!school || !Array.isArray(school) || school.length === 0) {
       console.error('School holidays response:', school);
