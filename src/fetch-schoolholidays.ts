@@ -64,20 +64,18 @@ async function fetchWithRetry(url: string, retries = 3): Promise<YearData[]> {
         throw new Error(`HTTP error: ${res.status}`);
       }
       
-      const data = await res.json();
+      const data = await res.json() as YearData | YearData[];
 
-      if (!Array.isArray(data)) {
-        console.log('Received data:', JSON.stringify(data, null, 2));
-        throw new Error(`Invalid response format: expected array, got ${typeof data}`);
-      }
+      // Handle both array and single object responses
+      const yearDataArray = Array.isArray(data) ? data : [data];
 
       // Log the first item for debugging
-      if (data.length > 0) {
-        console.log('First year data:', JSON.stringify(data[0].content?.[0]?.vacations?.[0], null, 2));
+      if (yearDataArray.length > 0) {
+        console.log('First year data:', JSON.stringify(yearDataArray[0].content?.[0]?.vacations?.[0], null, 2));
       }
 
       // Validate data structure with detailed logging
-      for (const year of data) {
+      for (const year of yearDataArray) {
         if (!year.id || !year.content || !Array.isArray(year.content)) {
           console.log('Invalid year structure:', JSON.stringify(year, null, 2));
           throw new Error(`Invalid year data structure: missing required fields`);
@@ -105,7 +103,7 @@ async function fetchWithRetry(url: string, retries = 3): Promise<YearData[]> {
         }
       }
       
-      return data as YearData[];
+      return yearDataArray;
     } catch (error) {
       console.error(`Attempt ${i + 1} failed:`, error);
       if (i === retries - 1) throw error;
