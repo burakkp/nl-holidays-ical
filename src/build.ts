@@ -83,8 +83,8 @@ async function main() {
     let pubEvents;
     try {
       const nowY = new Date().getUTCFullYear();
-      // Generate holidays for previous year, current year, and next 2 years
-      const pub = [nowY - 1, nowY, nowY + 1, nowY + 2].flatMap((y) =>
+      // Generate holidays for current year and next 2 years
+      const pub = [nowY, nowY + 1, nowY + 2].flatMap((y) =>
         generateNlPublicHolidays(y)
       );
       pubEvents = pub.map((p) => ({
