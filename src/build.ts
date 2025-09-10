@@ -1,8 +1,11 @@
 import { mkdirSync, writeFileSync, copyFileSync } from "node:fs";
-import { join } from "node:path";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import { eventsToIcs, IcsEvent } from "./generate-ics.js";
 import { fetchSchoolHolidays } from "./fetch-schoolholidays.js";
 import { generateNlPublicHolidays } from "./public-holidays.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const OUT = "dist";
 
