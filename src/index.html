@@ -60,30 +60,59 @@
         }
     </style>
     <script>
+        const languages = {
+            nl: { name: 'Nederlands', title: 'Nederlandse Schoolvakanties Kalender' },
+            en: { name: 'English', title: 'Dutch School Holidays Calendar' },
+            tr: { name: 'Türkçe', title: 'Hollanda Okul Tatilleri Takvimi' }
+        };
+
         function setLanguage(lang) {
+            if (!languages[lang]) return;
+
             // Update buttons
             document.querySelectorAll('.language-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === lang);
             });
-            // Update content
+
+            // Update content sections
             document.querySelectorAll('[data-lang]').forEach(el => {
                 el.classList.toggle('active', el.dataset.lang === lang);
             });
-            // Update URL hash
-            window.location.hash = lang;
+
+            // Update document title
+            document.title = languages[lang].title;
+
+            // Update URL hash without triggering a scroll
+            history.replaceState(null, '', `#${lang}`);
+
+            // Store preference
+            localStorage.setItem('preferredLanguage', lang);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const defaultLang = window.location.hash.slice(1) || 'en';
-            setLanguage(defaultLang);
+            // Add click event listeners to all language buttons
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+            });
+
+            // Set initial language (preference from localStorage, URL hash, or default to English)
+            const hashLang = window.location.hash.slice(1);
+            const storedLang = localStorage.getItem('preferredLanguage');
+            const defaultLang = hashLang || storedLang || 'en';
+            
+            if (languages[defaultLang]) {
+                setLanguage(defaultLang);
+            } else {
+                setLanguage('en');
+            }
         });
     </script>
 </head>
 <body>
     <div class="language-select">
-        <button class="language-btn" data-lang="nl" onclick="setLanguage('nl')">Nederlands</button>
-        <button class="language-btn" data-lang="en" onclick="setLanguage('en')">English</button>
-        <button class="language-btn" data-lang="tr" onclick="setLanguage('tr')">Türkçe</button>
+        <button class="language-btn" data-lang="nl">Nederlands</button>
+        <button class="language-btn" data-lang="en">English</button>
+        <button class="language-btn" data-lang="tr">Türkçe</button>
     </div>
 
     <div data-lang="nl">
