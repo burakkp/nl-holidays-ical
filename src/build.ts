@@ -16,12 +16,12 @@ function mapSchoolToEvents(rows: any[], region?: string): IcsEvent[] {
     .map((r) => ({
       uid: `nl-school-${r.id}`,
       title: `Schoolvakantie — ${r.type}${r.region ? ` (${r.region})` : ""}`,
-      start: new Date(r.startdate + "T00:00:00Z"),
-      end: new Date(
-        new Date(r.enddate + "T00:00:00Z").getTime() + 24 * 3600 * 1000
-      ), // dahil -> non-inclusive
+      start: new Date(r.startdate),
+      end: new Date(r.enddate),
       allDay: true,
       description: r.notice || undefined,
+      created: new Date(),
+      lastModified: new Date(),
     }));
 }
 

@@ -3,15 +3,23 @@ import { createEvents, DateArray } from "ics";
 export type IcsEvent = {
   title: string;
   start: Date;
-  end: Date; // non-inclusive (ics kütüphanesi DateArray bekler)
+  end: Date;
   description?: string;
   location?: string;
   uid: string;
   allDay?: boolean;
+  created?: Date;
+  lastModified?: Date;
 };
 
-function toDateArrayUTC(d: Date): DateArray {
-  return [d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate(), 0, 0];
+type DateTimeType = 'local' | 'utc';
+
+function toDateArray(d: Date): DateArray {
+  return [d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate()];
+}
+
+function sanitizeText(text: string): string {
+  return text.replace(/[\n\r\t]/g, ' ').replace(/[,;]/g, '\\$&');
 }
 
 export function eventsToIcs(name: string, events: IcsEvent[]): string {
@@ -25,15 +33,34 @@ export function eventsToIcs(name: string, events: IcsEvent[]): string {
         console.error('Invalid event:', JSON.stringify(e, null, 2));
         throw new Error('Invalid date format in event');
       }
+
+      // For all-day events, end date should be the next day (exclusive)
+      const endDate = new Date(e.end);
+      if (e.allDay) {
+        endDate.setUTCDate(endDate.getUTCDate() + 1);
+      }
+
+      const dateTimeType: DateTimeType = e.allDay ? 'local' : 'utc';
+
       return {
-        title: e.title,
-        start: toDateArrayUTC(e.start),
-        end: toDateArrayUTC(e.end),
-        description: e.description,
-        location: e.location,
-        calName: name,
+        title: sanitizeText(e.title),
+        description: e.description ? sanitizeText(e.description) : undefined,
+        location: e.location ? sanitizeText(e.location) : undefined,
+        start: toDateArray(e.start),
+        end: toDateArray(endDate),
+        startInputType: dateTimeType,
+        endInputType: dateTimeType,
+        startOutputType: dateTimeType,
+        endOutputType: dateTimeType,
         productId: "-//nl-holidays-ical//burakkp/nl-holidays-ical//EN",
         uid: e.uid,
+        created: e.created ? toDateArray(e.created) : undefined,
+        lastModified: e.lastModified ? toDateArray(e.lastModified) : undefined,
+        status: 'CONFIRMED' as const,
+        busyStatus: 'FREE' as const,
+        classification: 'PUBLIC' as const,
+        transp: 'TRANSPARENT' as const,
+        calName: sanitizeText(name),
       };
     });
 
@@ -47,19 +74,23 @@ export function eventsToIcs(name: string, events: IcsEvent[]): string {
       throw new Error("Failed to create events: no value returned");
     }
 
-    // ek başlıklar
-    return [
-      `BEGIN:VCALENDAR`,
-      `PRODID:-//nl-holidays-ical//github.com/ORG/REPO//EN`,
-      `CALSCALE:GREGORIAN`,
-      `METHOD:PUBLISH`,
-      `NAME:${name}`,
-      `X-WR-CALNAME:${name}`,
-      `REFRESH-INTERVAL;VALUE=DURATION:PT24H`,
-      `X-PUBLISHED-TTL:PT24H`,
-      value.replace(/^BEGIN:VCALENDAR\n|END:VCALENDAR\n?$/g, ""),
-      `END:VCALENDAR`,
-    ].join("\n");
+    // Format ICS file with proper headers and properties
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//nl-holidays-ical//burakkp/nl-holidays-ical//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      `X-WR-CALNAME:${sanitizeText(name)}`,
+      'X-WR-CALDESC:Dutch School Holidays Calendar',
+      'X-PUBLISHED-TTL:PT24H',
+      'REFRESH-INTERVAL;VALUE=DURATION:PT24H',
+      value.replace(/^BEGIN:VCALENDAR\r?\n|END:VCALENDAR\r?\n?$/g, '').trim(),
+      'END:VCALENDAR'
+    ];
+
+    // Ensure CRLF line endings as per RFC 5545
+    return lines.join('\r\n');
   } catch (error) {
     console.error('Failed to generate ICS:', error);
     if (error instanceof Error) {

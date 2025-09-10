@@ -1,12 +1,12 @@
 BEGIN:VCALENDAR
-PRODID:-//nl-holidays-ical//github.com/ORG/REPO//EN
+VERSION:2.0
+PRODID:-//nl-holidays-ical//burakkp/nl-holidays-ical//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-NAME:NL — Schoolvakanties (Tümü)
 X-WR-CALNAME:NL — Schoolvakanties (Tümü)
-REFRESH-INTERVAL;VALUE=DURATION:PT24H
+X-WR-CALDESC:Dutch School Holidays Calendar
 X-PUBLISHED-TTL:PT24H
-BEGIN:VCALENDAR
+REFRESH-INTERVAL;VALUE=DURATION:PT24H
 VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:-//nl-holidays-ical//burakkp/nl-holidays-ical//EN
@@ -16,729 +16,1123 @@ X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
 UID:nl-school-2024-2025-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20241025T220000Z
-DTEND:20241103T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20241026
+DTEND;VALUE=DATE:20241104
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20241025T220000Z
-DTEND:20241103T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20241026
+DTEND;VALUE=DATE:20241104
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20241018T220000Z
-DTEND:20241027T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20241019
+DTEND;VALUE=DATE:20241028
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20241220T230000Z
-DTEND:20250105T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20241221
+DTEND;VALUE=DATE:20250106
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20250214T230000Z
-DTEND:20250223T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250215
+DTEND;VALUE=DATE:20250224
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20250221T230000Z
-DTEND:20250302T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250222
+DTEND;VALUE=DATE:20250303
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20250221T230000Z
-DTEND:20250302T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250222
+DTEND;VALUE=DATE:20250303
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20250425T220000Z
-DTEND:20250504T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250426
+DTEND;VALUE=DATE:20250505
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20250711T220000Z
-DTEND:20250824T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250712
+DTEND;VALUE=DATE:20250825
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20250718T220000Z
-DTEND:20250831T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250719
+DTEND;VALUE=DATE:20250901
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2024-2025-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20250704T220000Z
-DTEND:20250817T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20250705
+DTEND;VALUE=DATE:20250818
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20251017T220000Z
-DTEND:20251026T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20251018
+DTEND;VALUE=DATE:20251027
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20251017T220000Z
-DTEND:20251026T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20251018
+DTEND;VALUE=DATE:20251027
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20251010T220000Z
-DTEND:20251019T220000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20251011
+DTEND;VALUE=DATE:20251020
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20251219T230000Z
-DTEND:20260104T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20251220
+DTEND;VALUE=DATE:20260105
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20260220T230000Z
-DTEND:20260301T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260221
+DTEND;VALUE=DATE:20260302
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20260213T230000Z
-DTEND:20260222T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260223
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20260213T230000Z
-DTEND:20260222T230000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260214
+DTEND;VALUE=DATE:20260223
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20260424T220000Z
-DTEND:20260503T220000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260504
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20260703T220000Z
-DTEND:20260816T220000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260817
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20260717T220000Z
-DTEND:20260830T220000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260718
+DTEND;VALUE=DATE:20260831
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2025-2026-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20260710T220000Z
-DTEND:20260823T220000Z
-DESCRIPTION:&sup1\; Voor deze vakantie geeft het ministerie van OCW alleen 
-	adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseert 
-	om bij de school na te vragen op welke dagen deze gesloten is in verband m
-	et vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20260711
+DTEND;VALUE=DATE:20260824
+DESCRIPTION:&sup1\\\; Voor deze vakantie geeft het ministerie van OCW allee
+	n adviesdata. Scholen mogen hier dus van afwijken. Het ministerie adviseer
+	t om bij de school na te vragen op welke dagen deze gesloten is in verband
+	 met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20261009T220000Z
-DTEND:20261018T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261019
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20261016T220000Z
-DTEND:20261025T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261026
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20261016T220000Z
-DTEND:20261025T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261026
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20261218T230000Z
-DTEND:20270103T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20270104
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20270219T230000Z
-DTEND:20270228T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270301
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20270219T230000Z
-DTEND:20270228T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270301
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20270212T230000Z
-DTEND:20270221T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270222
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20270423T220000Z
-DTEND:20270502T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270424
+DTEND;VALUE=DATE:20270503
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20270709T220000Z
-DTEND:20270822T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270710
+DTEND;VALUE=DATE:20270823
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20270716T220000Z
-DTEND:20270829T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270717
+DTEND;VALUE=DATE:20270830
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2026-2027-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20270723T220000Z
-DTEND:20270905T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20270724
+DTEND;VALUE=DATE:20270906
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20271015T220000Z
-DTEND:20271024T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20271016
+DTEND;VALUE=DATE:20271025
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20271015T220000Z
-DTEND:20271024T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20271016
+DTEND;VALUE=DATE:20271025
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20271022T220000Z
-DTEND:20271031T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20271023
+DTEND;VALUE=DATE:20271101
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20271224T230000Z
-DTEND:20280109T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20280110
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20280218T230000Z
-DTEND:20280227T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280219
+DTEND;VALUE=DATE:20280228
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20280225T230000Z
-DTEND:20280305T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280226
+DTEND;VALUE=DATE:20280306
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20280225T230000Z
-DTEND:20280305T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280226
+DTEND;VALUE=DATE:20280306
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20280428T220000Z
-DTEND:20280507T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280429
+DTEND;VALUE=DATE:20280508
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20280714T220000Z
-DTEND:20280827T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280715
+DTEND;VALUE=DATE:20280828
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20280707T220000Z
-DTEND:20280820T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280708
+DTEND;VALUE=DATE:20280821
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2027-2028-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20280721T220000Z
-DTEND:20280903T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20280722
+DTEND;VALUE=DATE:20280904
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20281013T220000Z
-DTEND:20281022T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20281014
+DTEND;VALUE=DATE:20281023
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20281020T220000Z
-DTEND:20281029T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20281021
+DTEND;VALUE=DATE:20281030
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20281020T220000Z
-DTEND:20281029T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20281021
+DTEND;VALUE=DATE:20281030
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20281222T230000Z
-DTEND:20290107T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20281223
+DTEND;VALUE=DATE:20290108
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20290216T230000Z
-DTEND:20290225T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20290217
+DTEND;VALUE=DATE:20290226
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20290216T230000Z
-DTEND:20290225T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20290217
+DTEND;VALUE=DATE:20290226
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20290209T230000Z
-DTEND:20290218T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210856Z
+DTSTART;VALUE=DATE:20290210
+DTEND;VALUE=DATE:20290219
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20290427T220000Z
-DTEND:20290506T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20290428
+DTEND;VALUE=DATE:20290507
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20290720T220000Z
-DTEND:20290902T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20290721
+DTEND;VALUE=DATE:20290903
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20290706T220000Z
-DTEND:20290819T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20290707
+DTEND;VALUE=DATE:20290820
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2028-2029-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20290713T220000Z
-DTEND:20290826T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20290714
+DTEND;VALUE=DATE:20290827
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-herfstvakantie-noord
 SUMMARY:Schoolvakantie — herfstvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20291019T220000Z
-DTEND:20291028T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20291020
+DTEND;VALUE=DATE:20291029
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-herfstvakantie-midden
 SUMMARY:Schoolvakantie — herfstvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20291019T220000Z
-DTEND:20291028T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20291020
+DTEND;VALUE=DATE:20291029
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-herfstvakantie-zuid
 SUMMARY:Schoolvakantie — herfstvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20291012T220000Z
-DTEND:20291021T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20291013
+DTEND;VALUE=DATE:20291022
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-kerstvakantie-heel Nederland
 SUMMARY:Schoolvakantie — kerstvakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20291221T230000Z
-DTEND:20300106T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20291222
+DTEND;VALUE=DATE:20300107
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-voorjaarsvakantie-noord
 SUMMARY:Schoolvakantie — voorjaarsvakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20300215T230000Z
-DTEND:20300224T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300216
+DTEND;VALUE=DATE:20300225
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-voorjaarsvakantie-midden
 SUMMARY:Schoolvakantie — voorjaarsvakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20300222T230000Z
-DTEND:20300303T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300223
+DTEND;VALUE=DATE:20300304
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-voorjaarsvakantie-zuid
 SUMMARY:Schoolvakantie — voorjaarsvakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20300222T230000Z
-DTEND:20300303T230000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300223
+DTEND;VALUE=DATE:20300304
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-meivakantie-heel Nederland
 SUMMARY:Schoolvakantie — meivakantie (heel Nederland)
-DTSTAMP:20250909T212230Z
-DTSTART:20300426T220000Z
-DTEND:20300505T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300427
+DTEND;VALUE=DATE:20300506
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-zomervakantie-noord
 SUMMARY:Schoolvakantie — zomervakantie (noord)
-DTSTAMP:20250909T212230Z
-DTSTART:20300719T220000Z
-DTEND:20300901T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300720
+DTEND;VALUE=DATE:20300902
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-zomervakantie-midden
 SUMMARY:Schoolvakantie — zomervakantie (midden)
-DTSTAMP:20250909T212230Z
-DTSTART:20300712T220000Z
-DTEND:20300825T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300713
+DTEND;VALUE=DATE:20300826
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
 BEGIN:VEVENT
 UID:nl-school-2029-2030-zomervakantie-zuid
 SUMMARY:Schoolvakantie — zomervakantie (zuid)
-DTSTAMP:20250909T212230Z
-DTSTART:20300705T220000Z
-DTEND:20300818T220000Z
-DESCRIPTION:&sup1\; Voor de herfst- en voorjaarsvakanties en de extra week 
-	meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen mogen 
-	hier dus van afwijken. Het ministerie adviseert om bij de school na te vra
-	gen op welke dagen deze gesloten is in verband met vakantie.
+DTSTAMP:20250910T210857Z
+DTSTART;VALUE=DATE:20300706
+DTEND;VALUE=DATE:20300819
+DESCRIPTION:&sup1\\\; Voor de herfst- en voorjaarsvakanties en de extra wee
+	k meivakantie geeft het ministerie van OCW alleen adviesdata. Scholen moge
+	n hier dus van afwijken. Het ministerie adviseert om bij de school na te v
+	ragen op welke dagen deze gesloten is in verband met vakantie.
+STATUS:CONFIRMED
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+TRANSP:TRANSPARENT
+CLASS:PUBLIC
+CREATED:20250910
+LAST-MODIFIED:20250910
 END:VEVENT
-END:VCALENDAR
-
 END:VCALENDAR
