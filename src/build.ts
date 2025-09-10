@@ -2,7 +2,7 @@ import { mkdirSync, writeFileSync, copyFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { eventsToIcs, IcsEvent } from "./generate-ics.js";
-import { fetchSchoolHolidays } from "./fetch-schoolholidays.js";
+import { fetchSchoolHolidays, Language, translations } from "./fetch-schoolholidays.js";
 import { generateNlPublicHolidays } from "./public-holidays.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -13,12 +13,18 @@ function ensureOut() {
   mkdirSync(OUT, { recursive: true });
 }
 
-function mapSchoolToEvents(rows: any[], region?: string): IcsEvent[] {
+function getHolidayTitle(type: string, region: string | undefined, lang: Language): string {
+  const holidayType = translations.holidayTypes[type as keyof typeof translations.holidayTypes]?.[lang] || type;
+  const regionText = region ? ` (${translations.regions[region as keyof typeof translations.regions]?.[lang] || region})` : "";
+  return `${holidayType}${regionText}`;
+}
+
+function mapSchoolToEvents(rows: any[], region?: string, lang: Language = "nl"): IcsEvent[] {
   return rows
     .filter((r) => !region || r.region === region)
     .map((r) => ({
       uid: `nl-school-${r.id}`,
-      title: `Schoolvakantie — ${r.type}${r.region ? ` (${r.region})` : ""}`,
+      title: getHolidayTitle(r.type, r.region, lang),
       start: new Date(r.startdate),
       end: new Date(r.enddate),
       allDay: true,
@@ -67,24 +73,30 @@ async function main() {
     }
 
     console.log('Generating school holiday ICS files...');
+    const languages: Language[] = ["nl", "en", "tr"];
     try {
-      writeFileSync(
-        join(OUT, "nl-school-all.ics"),
-        eventsToIcs("NL — Schoolvakanties (Tümü)", evAll)
-      );
-      writeFileSync(
-        join(OUT, "nl-school-north.ics"),
-        eventsToIcs("NL — Schoolvakanties (Noord)", evNorth)
-      );
-      writeFileSync(
-        join(OUT, "nl-school-central.ics"),
-        eventsToIcs("NL — Schoolvakanties (Midden)", evCentral)
-      );
-      writeFileSync(
-        join(OUT, "nl-school-south.ics"),
-        eventsToIcs("NL — Schoolvakanties (Zuid)", evSouth)
-      );
-    } catch (error) {
+      for (const lang of languages) {
+        const langPrefix = `${lang}/`;
+        mkdirSync(join(OUT, lang), { recursive: true });
+
+        // School holidays for each region
+        writeFileSync(
+          join(OUT, langPrefix, "school-all.ics"),
+          eventsToIcs(`${translations.titles.schoolHolidays[lang]}`, mapSchoolToEvents(school, undefined, lang))
+        );
+        writeFileSync(
+          join(OUT, langPrefix, "school-north.ics"),
+          eventsToIcs(`${translations.titles.schoolHolidays[lang]} - ${translations.regions.noord[lang]}`, mapSchoolToEvents(school, "noord", lang))
+        );
+        writeFileSync(
+          join(OUT, langPrefix, "school-central.ics"),
+          eventsToIcs(`${translations.titles.schoolHolidays[lang]} - ${translations.regions.midden[lang]}`, mapSchoolToEvents(school, "midden", lang))
+        );
+        writeFileSync(
+          join(OUT, langPrefix, "school-south.ics"),
+          eventsToIcs(`${translations.titles.schoolHolidays[lang]} - ${translations.regions.zuid[lang]}`, mapSchoolToEvents(school, "zuid", lang))
+        );
+    } }catch (error) {
       console.error('Failed to generate school holiday ICS files:', error);
       throw new Error(`ICS generation failed for school holidays: ${error instanceof Error ? error.message : error}`);
     }
@@ -104,10 +116,13 @@ async function main() {
         end: p.end,
         allDay: true,
       }));
-      writeFileSync(
-        join(OUT, "nl-public-holidays.ics"),
-        eventsToIcs("NL — Officiële Feestdagen", pubEvents)
-      );
+      for (const lang of languages) {
+        const langPrefix = `${lang}/`;
+        writeFileSync(
+          join(OUT, langPrefix, "public-holidays.ics"),
+          eventsToIcs(translations.titles.publicHolidays[lang], pubEvents)
+        );
+      }
     } catch (error) {
       console.error('Failed to generate public holidays:', error);
       throw new Error(`Public holidays generation failed: ${error instanceof Error ? error.message : error}`);
@@ -118,15 +133,31 @@ async function main() {
       const allInOne = [...pubEvents, ...evAll].sort(
         (a, b) => a.start.getTime() - b.start.getTime()
       );
-      writeFileSync(
-        join(OUT, "nl-all-in-one.ics"),
-        eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
-      );
+      for (const lang of languages) {
+        const langPrefix = `${lang}/`;
+        // All-in-one calendar for each language
+        const allInOneLang = [...pubEvents, ...mapSchoolToEvents(school, undefined, lang)].sort(
+          (a, b) => a.start.getTime() - b.start.getTime()
+        );
 
-      // Create index.ics that redirects to all-in-one calendar
+        writeFileSync(
+          join(OUT, langPrefix, "all-in-one.ics"),
+          eventsToIcs(translations.titles.combined[lang], allInOneLang)
+        );
+
+        // Create index.ics in each language directory
+        writeFileSync(
+          join(OUT, langPrefix, "index.ics"),
+          eventsToIcs(translations.titles.combined[lang], allInOneLang)
+        );
+      }
+
+      // Create root index.ics (default to English)
       writeFileSync(
         join(OUT, "index.ics"),
-        eventsToIcs("NL — Resmi + Okul Tatilleri", allInOne)
+        eventsToIcs(translations.titles.combined.en, [...pubEvents, ...mapSchoolToEvents(school, undefined, "en")].sort(
+          (a, b) => a.start.getTime() - b.start.getTime()
+        ))
       );
 
       // Copy index.html to output directory

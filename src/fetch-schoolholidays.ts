@@ -1,12 +1,83 @@
 import { fetch } from "undici";
 
+export type Language = "nl" | "tr" | "en";
+
+export const translations = {
+  holidayTypes: {
+    kerstvakantie: {
+      nl: "Kerstvakantie",
+      tr: "Noel Tatili",
+      en: "Christmas Holiday"
+    },
+    meivakantie: {
+      nl: "Meivakantie",
+      tr: "Mayıs Tatili",
+      en: "May Holiday"
+    },
+    zomervakantie: {
+      nl: "Zomervakantie",
+      tr: "Yaz Tatili",
+      en: "Summer Holiday"
+    },
+    herfstvakantie: {
+      nl: "Herfstvakantie",
+      tr: "Sonbahar Tatili",
+      en: "Autumn Holiday"
+    },
+    voorjaarsvakantie: {
+      nl: "Voorjaarsvakantie",
+      tr: "İlkbahar Tatili",
+      en: "Spring Holiday"
+    }
+  },
+  regions: {
+    noord: {
+      nl: "Noord",
+      tr: "Kuzey",
+      en: "North"
+    },
+    midden: {
+      nl: "Midden",
+      tr: "Orta",
+      en: "Central"
+    },
+    zuid: {
+      nl: "Zuid",
+      tr: "Güney",
+      en: "South"
+    },
+    "heel Nederland": {
+      nl: "Heel Nederland",
+      tr: "Tüm Hollanda",
+      en: "All Netherlands"
+    }
+  },
+  titles: {
+    schoolHolidays: {
+      nl: "Schoolvakanties",
+      tr: "Okul Tatilleri",
+      en: "School Holidays"
+    },
+    publicHolidays: {
+      nl: "Officiële Feestdagen",
+      tr: "Resmi Tatiller",
+      en: "Public Holidays"
+    },
+    combined: {
+      nl: "Schoolvakanties + Officiële Feestdagen",
+      tr: "Okul + Resmi Tatiller",
+      en: "School + Public Holidays"
+    }
+  }
+} as const;
+
 export interface SchoolHoliday {
   id: string;
   schoolyear: string; // "2025-2026"
   type: string; // kerstvakantie, meivakantie, zomervakantie, etc.
-  region?: "noord" | "midden" | "zuid" | "heel Nederland"; // bazıları bölgesiz (kerst, meivakantie: zorunlu/ülke geneli)
-  startdate: string; // ISO (UTC 00:00:00 varsayımı)
-  enddate: string; // ISO (bitiş dahil)
+  region?: "noord" | "midden" | "zuid" | "heel Nederland";
+  startdate: string; // ISO (UTC 00:00:00 assumption)
+  enddate: string; // ISO (end inclusive)
   notice?: string;
 }
 
