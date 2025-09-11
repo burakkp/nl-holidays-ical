@@ -1,35 +1,65 @@
-# NL Holidays & School Vacations iCal
+# NL Feestdagen & Schoolvakanties iCal
 
+🇳🇱 Automatisch bijgewerkte iCalendar (ICS) bestanden met **officiële feestdagen** en **schoolvakanties** in Nederland.  
+Geschikt voor **Google Calendar**, **Apple Calendar**, Outlook en andere agenda-apps.
 
-Hollanda resmi tatiller ve okul tatilleri için otomatik güncellenen ICS abonelikleri.
+---
 
+## 📅 Beschikbare kalenders
 
-## Abone Olma (Google Calendar)
-- Google Calendar > Other calendars (+) > From URL
-- Aşağıdaki URL’lerden birini yapıştırın (GitHub Pages deploy adresiniz):
-- https://<username>.github.io/<repo>/nl-public-holidays.ics
-- https://<username>.github.io/<repo>/nl-school-north.ics
-- https://<username>.github.io/<repo>/nl-school-central.ics
-- https://<username>.github.io/<repo>/nl-school-south.ics
-- https://<username>.github.io/<repo>/nl-school-all.ics
-- https://<username>.github.io/<repo>/nl-all-in-one.ics
+- **Officiële feestdagen**  
+  `https://burakkp.github.io/<repo>/nl-public-holidays.ics`
 
+- **Schoolvakanties (Noord)**  
+  `https://burakkp.github.io/<repo>/nl-school-north.ics`
 
-## Abone Olma (Apple Calendar / Mac)
-- Calendar > File > New Calendar Subscription
-- URL’yi girin ve “iCloud” konumunu seçin.
+- **Schoolvakanties (Midden)**  
+  `https://burakkp.github.io/<repo>/nl-school-central.ics`
 
+- **Schoolvakanties (Zuid)**  
+  `https://burakkp.github.io/<repo>/nl-school-south.ics`
 
-## Geliştirme
-- `yarn` ile bağımlılıkları kurun.
-- `yarn build` üretir; ICS’ler `dist/` altında.
-- GitHub Actions haftalık olarak `docs/`’u günceller.
+- **Schoolvakanties (alle regio’s)**  
+  `https://burakkp.github.io/<repo>/nl-school-all.ics`
 
+- **Alles-in-één (feestdagen + schoolvakanties)**  
+  `https://burakkp.github.io/<repo>/nl-all-in-one.ics`
 
-## Doğruluk & Kapsam
-- Okul tatilleri Rijksoverheid Open Data’dan düzenli olarak çekilir.
-- Resmi tatiller kural tabanlı olarak üretilir (Paskalya vb. hareketli tarih hesaplamaları).
+---
 
+## 🔗 Abonneren
 
-## Lisans
-MIT
+### Google Calendar
+1. Open [Google Calendar](https://calendar.google.com/).  
+2. Klik links bij *Andere agenda’s* op **+** → *Via URL*.  
+3. Plak de gewenste URL en bevestig.  
+
+### Apple Calendar (Mac / iPhone / iPad)
+1. Open de app **Agenda**.  
+2. Kies **Archief → Nieuwe agenda-abonnement**.  
+3. Plak de URL en kies eventueel iCloud als locatie.  
+
+---
+
+## ⚙️ Hoe werkt het?
+
+- **Schoolvakanties** worden automatisch opgehaald uit de open data van de [Rijksoverheid](https://opendata.rijksoverheid.nl).  
+- **Officiële feestdagen** worden berekend via vaste regels (Nieuwjaarsdag, Koningsdag, Kerstmis, enz.) en beweeglijke data (Pasen, Hemelvaart, Pinksteren).  
+- Het systeem bouwt wekelijks nieuwe ICS-bestanden via **GitHub Actions** en publiceert deze naar **GitHub Pages**.  
+
+---
+
+## 👩‍💻 Zelf ontwikkelen
+
+### Vereisten
+- Node.js 20+
+- npm
+
+### Installatie
+```bash
+npm install
+
+## 📖 Licentie
+
+Dit project is gepubliceerd onder de MIT-licentie.
+Vrij te gebruiken, delen en aanpassen.
