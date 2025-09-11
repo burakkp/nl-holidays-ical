@@ -8,22 +8,22 @@ Geschikt voor **Google Calendar**, **Apple Calendar**, Outlook en andere agenda-
 ## 📅 Beschikbare kalenders
 
 - **Officiële feestdagen**  
-  `https://burakkp.github.io/<repo>/nl-public-holidays.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/public-holidays.ics`
 
 - **Schoolvakanties (Noord)**  
-  `https://burakkp.github.io/<repo>/nl-school-north.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/school-north.ics`
 
 - **Schoolvakanties (Midden)**  
-  `https://burakkp.github.io/<repo>/nl-school-central.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/school-central.ics`
 
 - **Schoolvakanties (Zuid)**  
-  `https://burakkp.github.io/<repo>/nl-school-south.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/school-south.ics`
 
 - **Schoolvakanties (alle regio’s)**  
-  `https://burakkp.github.io/<repo>/nl-school-all.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/school-all.ics`
 
 - **Alles-in-één (feestdagen + schoolvakanties)**  
-  `https://burakkp.github.io/<repo>/nl-all-in-one.ics`
+  `https://burakkp.github.io/nl-holidays-ical/nl/all-in-one.ics`
 
 ---
 
