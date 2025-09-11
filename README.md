@@ -58,6 +58,7 @@ Geschikt voor **Google Calendar**, **Apple Calendar**, Outlook en andere agenda-
 ### Installatie
 ```bash
 npm install
+```
 
 ## 📖 Licentie
 
